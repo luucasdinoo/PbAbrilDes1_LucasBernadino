@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Person {
-
     private String name;
     private Person spouse;
     private List<Person> children = new ArrayList<>();
@@ -13,9 +12,13 @@ public class Person {
         this.name = name;
     }
 
-    public Person(String name,Person spouse) {
+    public Person(String name,Person mom) {
         this.name = name;
-        this.spouse = spouse;
+        mom.addChild(this);
+    }
+
+    public String getName() {
+        return name;
     }
 
     public void addSpouse(Person spouse){
@@ -26,14 +29,13 @@ public class Person {
         children.add(child);
     }
 
-    public void printFamilyTree(){
+    public void printFamilyTree(int num) {
 
-    }
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", spouse=" + spouse +
-                '}';
+        String build =  this.getName() + " -- " + (spouse != null ? "Married to: " + spouse.getName() + " -- " + "Children: " : " Single ") ;
+        System.out.println(build);
+
+        for (Person child : children){
+            child.printFamilyTree(num + 1);
+        }
     }
 }
