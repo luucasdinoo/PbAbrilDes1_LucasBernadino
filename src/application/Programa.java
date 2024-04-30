@@ -4,6 +4,7 @@ import model.entities.Person;
 
 public class Programa {
     public static void main(String[] args) {
+
         Person lily = new Person("Lily");
         lily.addSpouse(new Person("Wilhelm"));
         // Patriarch and matriarch
@@ -35,8 +36,7 @@ public class Programa {
         Person claudia = new Person("Claudia", sigrid);
         martin.addSpouse(new Person("Carla"));
         martin.addChild(new Person("Nicolas"));
-        lily.printFamilyTree();
+        lily.printFamilyTree(0);
 
-        System.out.println(lily);
     }
 }
