@@ -2,7 +2,7 @@ package application;
 
 import model.entities.Person;
 
-public class Programa {
+public class Program {
     public static void main(String[] args) {
 
         Person lily = new Person("Lily");
