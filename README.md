@@ -11,7 +11,6 @@ Este repositório contém todos os cenários do primeiro desafio do programa de 
 ##Pré-requisitos
 
 Certifique-se de ter o java instalado, preferencialmente na versão 17 LTS.
-
 ##Instalação
 
 1. Clone este repositório.
@@ -87,3 +86,4 @@ Arquivos utilizados:
 Tabelas criadas:
 * Person
 * Waggon
+
